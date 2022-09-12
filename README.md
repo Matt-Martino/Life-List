@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Life-List
+Frontend Capstone project
+Life List is an app of all reptiles and amphibian species that a herper (reptile/Amphib version of a birder) can add "finds" to.  Very similar to what a pokedex is pokemon.  
+>>>>>>> 6ce024a61956bcc7d2e8c7bff6d66e55e9e0a620
