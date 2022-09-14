@@ -107,8 +107,8 @@ export const EditLifer = () => {
                     {
                         herpOrder.map(
                             (order) => {
-                                return <article className="HerpType">
-                                    <div className="form-group" key={`type--${order.id}`}>
+                                return <article className="HerpType" key={`type--${order.id}`}>
+                                    <div className="form-group" >
                                         <input type="radio" name="OnlyOne"
 
                                             onChange={
