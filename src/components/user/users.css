@@ -1,0 +1,18 @@
+.HerpTypes {
+    display: flex;
+    flex-direction: column;
+}
+
+.HerpType {
+    background-color: rgb(130, 108, 150);
+    border: 5px dotted rgb(119, 20, 94);
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+}
+
+.form-group {
+    background-color: rgb(136, 20, 236);
+    border: 5px dotted rgb(71, 28, 61);
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+}
