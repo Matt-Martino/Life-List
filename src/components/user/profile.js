@@ -6,6 +6,7 @@ export const YourLifeList = () => {
 
     const [lifeList, setLifeList] = useState([])
     const [filteredLifeList, setFiltered] = useState([])
+    const [deleteChange, setDeleteChange] = useState([])
     const navigate = useNavigate()
     const localLiferUser = localStorage.getItem("lifer_user")
     const liferUserObject = JSON.parse(localLiferUser)
@@ -19,6 +20,16 @@ export const YourLifeList = () => {
                     setLifeList(liferArray)
                 })
         }, []
+    )
+    useEffect(
+        () => {
+
+            fetch(`http://localhost:8088/lifers`)
+                .then(response => response.json())
+                .then((liferArray) => {
+                    setLifeList(liferArray)
+                })
+        }, [deleteChange]
     )
 
     useEffect(
@@ -61,7 +72,7 @@ export const YourLifeList = () => {
                                     method: "DELETE"
                                 })
                                     .then(() => {
-                                        navigate("/profile")
+                                        setDeleteChange(Date.now)
                                     })
                             }} className="ticket__delete"
 
