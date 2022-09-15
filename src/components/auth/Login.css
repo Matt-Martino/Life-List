@@ -42,21 +42,45 @@ fieldset {
 }
 
 .container--login {
+
     text-align: center;
 }
 
 .form--login {
-    background-position-x: right;
-    z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
-    background-color: hsla(0,0%,100%,0.40);
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+    color: rgb(187, 240, 42);
+    text-shadow: 2px 2px 1px #181818;
+    border: 4.2px double #98c6e6;
+    margin: 6px;
+    padding: 4px;
+    background-color: #224212;
+    
 }
 
 .button--close {
     position: relative;
     bottom: -2rem;
+}
+
+.btn {
+
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 14px;
+    padding: 4px;
+    border-radius: 10px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background: #339900;
+    background: -moz-linear-gradient(left, #339900 0%, #277500 62%, #123500 100%);
+    background: -webkit-linear-gradient(left, #339900 0%, #277500 62%, #123500 100%);
+    background: linear-gradient(to right, #339900 0%, #277500 62%, #123500 100%);
+    border: 4px double rgb(28, 110, 164);
+    display: inline-block
 }
 
