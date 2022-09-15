@@ -29,7 +29,7 @@ export const Login = () => {
 
     return (
         <main className="container--login">
-            <section>
+            <section className="login-hug">
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1>Life List</h1>
                     <h2>Please sign in</h2>
