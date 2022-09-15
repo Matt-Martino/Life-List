@@ -22,9 +22,12 @@ fieldset {
 .label--login {
     width: 8rem;
     display: inline-block;
+    
 }
 
 .form-control {
+    background-color: rgba(61, 60, 60, 0.4);
+    opacity: 90;
     display: block;
     width: 94%;
     height: calc(1.5em + .75rem + 2px);
@@ -32,8 +35,7 @@ fieldset {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
+    color: #dfe6ec;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
@@ -47,12 +49,16 @@ fieldset {
 }
 
 .form--login {
+    background-image: url(http://3.bp.blogspot.com/-Hx6GR25jfTc/V2W1i-uDpqI/AAAAAAAAEXM/UPNOefJLrBYWwEx9TPRh6BW4oAy1QlQCwCHM/s1600/reptile-wallpapers-wallpaper-cave.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-box-shadow: 5px 5px 15px 5px #000000;
     box-shadow: 5px 5px 15px 5px #000000;
     color: rgb(187, 240, 42);
     text-shadow: 2px 2px 1px #181818;
     border: 4.2px double #98c6e6;
-    margin: 6px;
+    margin: 50px;
     padding: 4px;
     background-color: #224212;
     
@@ -84,3 +90,16 @@ fieldset {
     display: inline-block
 }
 
+.login-hug {
+
+    display: block;
+    height: calc(1.5em + .75rem + 2px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
