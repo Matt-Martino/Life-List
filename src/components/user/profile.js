@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import "./users.css"
+import "./profile.css"
 
 export const YourLifeList = () => {
 
@@ -47,41 +47,43 @@ export const YourLifeList = () => {
 
 
     return <>
-        <article className="HerpTypes">
+        <section className="mainbox">
             <h2>Your Life List!</h2>
+            <article className="HerpTypes">
 
-            {
-                filteredLifeList.map(
-                    (list) => {
-                        return <section className="HerpType" key={`herp--${list.id}`}>
-                            <header>Order: </header>
-                            <ul>Family:{list.family}</ul>
-                            <ul>Genus:{list.genus}</ul>
-                            <ul>Species:{list.species}</ul>
-                            <ul>Common Name:{list.commonName}</ul>
-                            <ul>Location Found:{list.locationFound}</ul>
-                            <ul>Date Found:{list.dateFound}</ul>
+                {
+                    filteredLifeList.map(
+                        (list) => {
+                            return <section className="HerpType" key={`herp--${list.id}`}>
+                                <ul className="list">Order: {list.order}</ul>
+                                <ul className="list">Family:  {list.family}</ul>
+                                <ul className="list">Genus:  {list.genus}</ul>
+                                <ul className="list">Species:  {list.species}</ul>
+                                <ul className="list">Common Name:  {list.commonName}</ul>
+                                <ul className="list">Location Found:  {list.locationFound}</ul>
+                                <ul className="list">Date Found:  {list.dateFound}</ul>
 
-                            <button onClick={
-                                () => navigate(`${list.id}/edit`)}
-                                className="btn btn-primary">
-                                Edit</button>
+                                <button onClick={
+                                    () => navigate(`${list.id}/edit`)}
+                                    className="btn btn-primary">
+                                    Edit</button>
 
-                            <button onClick={() => {
-                                fetch(`http://localhost:8088/lifers/${list.id}`, {
-                                    method: "DELETE"
-                                })
-                                    .then(() => {
-                                        setDeleteChange(Date.now)
+                                <button onClick={() => {
+                                    fetch(`http://localhost:8088/lifers/${list.id}`, {
+                                        method: "DELETE"
                                     })
-                            }} className="ticket__delete"
+                                        .then(() => {
+                                            setDeleteChange(Date.now)
+                                        })
+                                }} className="btn btn-primary"
 
-                            >Delete</button>
-                        </section>
-                    }
-                )
-            }
+                                >Delete</button>
+                            </section>
+                        }
+                    )
+                }
 
-        </article>
+            </article>
+        </section>
     </>
 }

@@ -1,0 +1,54 @@
+.HerpTypes {
+    display: grid;
+    justify-content: space-evenly;
+    
+
+}
+
+.HerpType {
+
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+    color: rgb(187, 240, 42);
+    text-shadow: 2px 2px 1px #181818;
+    border: 4.2px double #98c6e6;
+    margin: 6px;
+    padding: 4px;
+    background-color: #224212;
+    
+}
+
+.btn {
+
+    color: rgb(19, 18, 18);
+    font-size: 14px;
+    line-height: 14px;
+    padding: 4px;
+    border-radius: 10px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background: #339900;
+    background-image: linear-gradient(to right, rgb(168, 190, 41) 0%, rgb(185, 171, 41) 50%, rgb(107, 122, 17) 85%);
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+    border: 4px double rgb(28, 110, 164);
+    display: inline-block
+}
+
+.btn:hover {
+    background: #1C6EA4;
+}
+
+.btn:active {
+    background: #144E75;
+
+}
+
+.list {
+    background-color: #224212;
+    
+}
+

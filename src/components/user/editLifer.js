@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import "./users.css"
 
 export const EditLifer = () => {
 
@@ -102,13 +103,13 @@ export const EditLifer = () => {
             <form className="HerpType">
                 <h2 className="liferform__title">New lifer!</h2>
 
-                <fieldset>
-                    <label htmlFor="name">Select type of herp</label>
+                <fieldset className="orderBoxMain">
+                    <label htmlFor="name" className="orderBox">Select type of herp</label>
                     {
                         herpOrder.map(
                             (order) => {
-                                return <article className="HerpType" key={`type--${order.id}`}>
-                                    <div className="form-group" >
+                                return <article className="orderType" key={`type--${order.id}`}>
+                                    <div className="order" >
                                         <input type="radio" name="OnlyOne"
 
                                             onChange={
@@ -188,13 +189,13 @@ export const EditLifer = () => {
 
                 <fieldset>
                     <div className="form-group">
-                        <label htmlFor="description">Connom Name:</label>
+                        <label htmlFor="description">Common Name:</label>
                         <input
                             required autoFocus
                             type="text"
                             className="form-control"
                             placeholder="in English please"
-                            value={entry.connomName}
+                            value={entry.commonName}
                             onChange={
                                 (evt) => {
                                     const copy = { ...entry }

@@ -3,16 +3,48 @@
     flex-direction: column;
 }
 
-.HerpType {
-    background-color: rgb(130, 108, 150);
-    border: 5px dotted rgb(119, 20, 94);
-    padding: 0.7rem;
-    margin: 0.5rem 0;
+.orderType {
+    flex-wrap: wrap;
+
 }
 
-.form-group {
-    background-color: rgb(136, 20, 236);
-    border: 5px dotted rgb(71, 28, 61);
-    padding: 0.7rem;
-    margin: 0.5rem 0;
+.orderBoxMain {
+    display: grid;
+    grid-template-rows: repeat(3, 30px);
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #2e6313;
+
+
+}
+
+.btn {
+
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 14px;
+    padding: 4px;
+    border-radius: 10px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background: #339900;
+    background: -moz-linear-gradient(left, #339900 0%, #277500 62%, #123500 100%);
+    background: -webkit-linear-gradient(left, #339900 0%, #277500 62%, #123500 100%);
+    background: linear-gradient(to right, #339900 0%, #277500 62%, #123500 100%);
+    border: 4px double rgb(28, 110, 164);
+    display: inline-block
+}
+
+.btn:hover {
+    background: #1C6EA4;
+}
+
+.btn:active {
+    background: #144E75;
+
 }
