@@ -16,6 +16,7 @@ export const CreateNewLifer = () => {
     const [newLifer, updateNewLifer] = useState({
         usersId: liferUserObject.id,
         herpTypeId: (0),
+        order: "",
         genus: "",
         species: "",
         commonName: "",
@@ -92,19 +93,20 @@ export const CreateNewLifer = () => {
             <form className="HerpType">
                 <h2 className="liferform__title">New lifer!</h2>
 
-                <fieldset>
-                    <label htmlFor="name">Select type of herp</label>
+                <fieldset className="orderBoxMain">
+                    <label htmlFor="name" className="orderBox">Select type of herp</label>
                     {
                         herpOrder.map(
                             (order) => {
                                 return <article className="orderType" key={`type--${order.id}`} >
-                                    <div className="form-group" >
+                                    <div className="order" >
                                         <input type="radio" name="OnlyOne"
 
                                             onChange={
                                                 (evt) => {
                                                     const copy = { ...newLifer }
                                                     copy.herpTypeId = evt.target.value
+                                                    copy.order = order.order
                                                     updateNewLifer(copy)
 
                                                 }

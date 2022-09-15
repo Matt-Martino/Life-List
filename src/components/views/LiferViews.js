@@ -10,8 +10,8 @@ export const LiferViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>Life List</h1>
-                    <div>Welcome back herper!</div>
+                    <h1 className="Header">Life List</h1>
+                    <h2 className="Header">Welcome back herper!</h2>
 
                     <Outlet />
                 </>
