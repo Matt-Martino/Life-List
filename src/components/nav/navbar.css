@@ -28,6 +28,5 @@
     text-transform: none;
     background-image: linear-gradient(to right, rgb(179, 206, 29) 0%, rgb(179, 165, 29) 50%, rgb(107, 122, 17) 100%);
     box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
-    border: 4px double rgb(28, 110, 164);
     display: inline-block
 }
