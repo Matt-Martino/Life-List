@@ -53,10 +53,10 @@ fieldset {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    
     box-shadow: 5px 5px 15px 5px #000000;
     color: rgb(187, 240, 42);
-    text-shadow: 2px 2px 1px #181818;
+
     border: 4.2px double #98c6e6;
     margin: 50px;
     padding: 4px;
@@ -102,4 +102,18 @@ fieldset {
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.register-text {
+    color: #48b632d7;
+    background:rgba(108, 124, 18, 0.055);
+    min-height:9px;
+    padding:10px;
+    -webkit-text-stroke: 1px black;
+}
+
+.register-text2 {
+    color: #48b632d7;
+    background:rgba(108, 124, 18, 0.055);
+    -webkit-text-stroke: .5px black;
 }

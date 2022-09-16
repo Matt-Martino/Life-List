@@ -31,8 +31,8 @@ export const Login = () => {
         <main className="container--login">
             <section className="login-hug">
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Life List</h1>
-                    <h2>Please sign in</h2>
+                    <h1 className="register-text">Life List</h1>
+                    <h2 className="register-text">Please sign bitch</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input type="email"

@@ -15,6 +15,7 @@ body {
 
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -35,8 +36,19 @@ h5,
 h6 {
   text-align: center;
   font-family: 'Roboto';
-  letter-spacing: 2px;
-  color: rgb(186, 236, 48);
-  text-shadow: 0px 0px 8px  #0a0a0a;
-  
+  letter-spacing: 1.6px;
+
+
+}
+
+Header {
+  color: aliceblue;
+}
+
+.Header-text-edit {
+  color: #48b632d7;
+  background: rgba(108, 124, 18, 0.616);
+  min-height: 9px;
+  padding: 10px;
+  -webkit-text-stroke: 1px rgb(8, 8, 8);
 }

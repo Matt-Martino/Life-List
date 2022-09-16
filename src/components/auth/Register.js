@@ -54,8 +54,8 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Lifer List</h1>
-                <h5>A place to record and keep track of your once in a lifetime finds.</h5>
+                <h1 className="register-text">Please Register for Lifer List</h1>
+                <h2 className="register-text2">A place to record and keep track of your once in a lifetime finds.</h2>
                 <fieldset>
                     <label htmlFor="fullName"></label>
                     <input onChange={updateUser}
