@@ -1,8 +1,9 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { CreateNewLifer } from "../user/NewFind"
-import { HerpTypeList } from "../user/herpTypes"
+import { HerpTaxonomyList } from "../user/browseTaxonomyTree"
 import { YourLifeList } from "../user/profile"
 import { EditLifer } from "../user/editLifer"
+import { SearchTaxonomy } from "../user/SearchTaxonomy"
 
 export const LiferViews = () => {
 
@@ -18,9 +19,9 @@ export const LiferViews = () => {
             }>
                 <Route path="/profile" element={ <YourLifeList /> } />
                 <Route path="/newfind" element={ <CreateNewLifer /> } />
-                <Route path="/order" element={ <HerpTypeList /> } />
+                <Route path="/order" element={ <HerpTaxonomyList /> } />
                 <Route path="profile/:entryId/edit" element={ <EditLifer />} />
-                
+                <Route path="searchTaxonomy" element={ <SearchTaxonomy />} />
 
             </Route>
         </Routes>

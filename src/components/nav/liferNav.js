@@ -16,7 +16,11 @@ export const LiferNav = () => {
             </li>
 
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/order">Browse Order and Family</Link>
+                <Link className="navbar__link" to="/order">Browse Taxonomy trees</Link>
+            </li>
+
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/searchTaxonomy">Taxonomy Search</Link>
             </li>
 
             {
