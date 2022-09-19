@@ -14,8 +14,10 @@ export const HerpTaxonomyList = () => {
     const [herpTypes, setHerpTypes] = useState([])
     const [genusTrigger, filterGenusTrigger] = useState([])
     const [familyTrigger, triggerFamilySelector] = useState([])
-    const [filteredSpecies, setSpecies] = useState([])
+    const [filteredSpecies, filterSpeciesSelector] = useState([])
     const [speciesTrigger, filterSpeciesTrigger] = useState([])
+    const [filteredSubspecies, setFilterSubspecies] = useState([])
+    const [subspeciesTrigger, filterSubSpeciesTrigger] = useState([])
 
 
     const [newLifer, updateNewLifer] = useState({
@@ -89,46 +91,109 @@ export const HerpTaxonomyList = () => {
         () => {
 
             if (parseInt(newLifer.herpTypeId) <= 5) {
-                const filteredByReptiles = reptiles.filter(herp => {
+                const filteredByReptiles = reptiles.reduce((arr, herp) => {
 
-                    return herp.family === newLifer.family
-                })
+                    if (herp.family === newLifer.family) {
+                        arr.push(herp.genus)
+                    }
+                    return arr
+                }, [])
+
                 const uniqueReptiles = new Set(filteredByReptiles)
-                console.log(uniqueReptiles)
                 const uniqueReptileArray = Array.from(uniqueReptiles)
 
                 filterGenus(uniqueReptileArray)
             }
             else {
-                const filteredByAmphibs = amphibians.filter(herp => {
-                    return herp.family === newLifer.family
-                })
-                filterGenus(filteredByAmphibs)
+                const filteredByAmphibians = amphibians.reduce((arr, herp) => {
+
+                    if (herp.family === newLifer.family) {
+                        arr.push(herp.genus)
+                    }
+                    return arr
+                }, [])
+
+                const uniqueAmphibians = new Set(filteredByAmphibians)
+                const uniqueAmphibianArray = Array.from(uniqueAmphibians)
+                filterGenus(uniqueAmphibianArray)
             }
 
         },
         [genusTrigger]
     )
-    
+
     useEffect(
         () => {
-            const filteredSpecies = filteredGenus.filter(herp => herp.genus === newLifer.genus)
-            setSpecies(filteredSpecies)
 
+            if (parseInt(newLifer.herpTypeId) <= 5) {
+                const filteredByReptiles = reptiles.reduce((arr, herp) => {
+
+                    if (herp.genus === newLifer.genus) {
+                        arr.push(herp.species)
+                    }
+                    return arr
+                }, [])
+
+                const uniqueReptiles = new Set(filteredByReptiles)
+                const uniqueReptileArray = Array.from(uniqueReptiles)
+
+                filterSpeciesSelector(uniqueReptileArray)
+            }
+            else {
+                const filteredByAmphibians = amphibians.reduce((arr, herp) => {
+
+                    if (herp.genus === newLifer.genus) {
+                        arr.push(herp.species)
+                    }
+                    return arr
+                }, [])
+
+                const uniqueAmphibians = new Set(filteredByAmphibians)
+                const uniqueAmphibianArray = Array.from(uniqueAmphibians)
+                filterSpeciesSelector(uniqueAmphibianArray)
+            }
 
         },
         [speciesTrigger]
     )
 
-    // useEffect(
-    //     () => {
-    //         const filteredSubSpecies = filteredSpecies.filter(herp => herp.species === newLifer.species)
-    //         setSpecies(filteredSubSpecies)
+    useEffect(
+        () => {
+
+            if (parseInt(newLifer.herpTypeId) <= 5) {
+                const filteredByReptiles = reptiles.reduce((arr, herp) => {
+
+                    if (herp.species === newLifer.species) {
+                        arr.push(herp.subspecies)
+                    }
+                    return arr
+                }, [])
+
+                const uniqueReptiles = new Set(filteredByReptiles)
+                const uniqueReptileArray = Array.from(uniqueReptiles)
+
+                setFilterSubspecies(uniqueReptileArray)
+            }
+            else {
+                const filteredByAmphibians = amphibians.reduce((arr, herp) => {
+
+                    if (herp.species === newLifer.species) {
+                        arr.push(herp.subspecies)
+                    }
+                    return arr
+                }, [])
+
+                const uniqueAmphibians = new Set(filteredByAmphibians)
+                const uniqueAmphibianArray = Array.from(uniqueAmphibians)
+                setFilterSubspecies(uniqueAmphibianArray)
+            }
+
+        },
+        [subspeciesTrigger]
+    )
 
 
-    //     },
-    //     [speciesTrigger]
-    // )
+
 
 
 
@@ -151,6 +216,7 @@ export const HerpTaxonomyList = () => {
                                                 copy.order = order.order
                                                 copy.genus = ""
                                                 copy.species = ""
+                                                copy.subspecies = ""
                                                 updateNewLifer(copy)
                                                 triggerFamilySelector(Date.now)
 
@@ -199,7 +265,7 @@ export const HerpTaxonomyList = () => {
                             <option value={0}>Select the Genus you'd like to view</option>
                             {
                                 filteredGenus.map(herp => {
-                                    return <option key={`genus--${herp.id}`} value={herp.genus}>{herp.genus}</option>
+                                    return <option key={`genus--${herp}`} value={herp}>{herp}</option>
                                 })
                             }
                         </select>
@@ -214,21 +280,22 @@ export const HerpTaxonomyList = () => {
                                 const copy = { ...newLifer }
                                 copy.species = evt.target.value
                                 updateNewLifer(copy)
+                                filterSubSpeciesTrigger(Date.now)
                             }}
                         >
                             <option value={0}>Select the Species you'd like to view</option>
                             {
                                 filteredSpecies.map(herp => {
-                                    return <option key={`genus--${herp.id}`} value={herp.species}>{herp.species}</option>
+                                    return <option key={`species--${herp}`} value={herp}>{herp}</option>
                                 })
                             }
                         </select>
                     </div>
                 </fieldset>
 
-                {/* <fieldset>
+                <fieldset>
                     <div className="form-group" >
-                        <label htmlFor="description">Sub Species:</label>
+                        <label htmlFor="description">SubSpecies:</label>
                         <select id="description" value={newLifer.subspecies}
                             onChange={(evt) => {
                                 const copy = { ...newLifer }
@@ -236,15 +303,17 @@ export const HerpTaxonomyList = () => {
                                 updateNewLifer(copy)
                             }}
                         >
-                            <option value={0}>Select the subspecies you'd like to view</option>
+                            <option value={0}>Some animals do not have a subspecies</option>
                             {
-                                filteredSubSpecies.map(herp => {
-                                    return <option key={`genus--${herp.id}`} value={herp.subspecies}>{herp.subspecies}</option>
+                                filteredSubspecies.map(herp => {
+                                    return <option key={`species--${herp}`} value={herp}>{herp}</option>
                                 })
                             }
                         </select>
                     </div>
-                </fieldset> */}
+                </fieldset>
+
+
 
 
             </form>

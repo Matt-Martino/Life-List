@@ -12,7 +12,7 @@ export const LiferNav = () => {
             </li>
 
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/newfind">New Find!</Link>
+                <Link className="navbar__link" to="/newfind">Manually enter a New Find</Link>
             </li>
 
             <li className="navbar__item active">
