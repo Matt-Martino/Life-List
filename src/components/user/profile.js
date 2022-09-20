@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import "./profile.css"
 
-export const YourLifeList = () => {
+export const YourLifeList = ({searchTermState}) => {
 
     const [lifeList, setLifeList] = useState([])
     const [filteredLifeList, setFiltered] = useState([])
@@ -10,6 +10,21 @@ export const YourLifeList = () => {
     const navigate = useNavigate()
     const localLiferUser = localStorage.getItem("lifer_user")
     const liferUserObject = JSON.parse(localLiferUser)
+
+    useEffect(
+        () => {
+            const searchedProfile = lifeList.filter(herp => {
+                return herp.order.toLowerCase().includes(searchTermState.toLowerCase())
+                || herp.family.toLowerCase().includes(searchTermState.toLowerCase())
+                || herp.genus.toLowerCase().includes(searchTermState.toLowerCase())
+                || herp.species.toLowerCase().includes(searchTermState.toLowerCase())
+                || herp.commonName.toLowerCase().includes(searchTermState.toLowerCase())
+                                
+                })
+            setFiltered(searchedProfile)
+        },
+        [searchTermState]
+    )
 
     useEffect(
         () => {

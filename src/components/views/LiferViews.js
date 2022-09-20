@@ -4,6 +4,8 @@ import { HerpTaxonomyList } from "../user/browseTaxonomyTree"
 import { YourLifeList } from "../user/profile"
 import { EditLifer } from "../user/editLifer"
 import { SearchTaxonomy } from "../user/SearchTaxonomy"
+import { ProfileSearch } from "../user/profileSearch"
+import { ProfileSearchContainer } from "../user/profileSearchContainer"
 
 export const LiferViews = () => {
 
@@ -17,7 +19,7 @@ export const LiferViews = () => {
                     <Outlet />
                 </>
             }>
-                <Route path="/profile" element={ <YourLifeList /> } />
+                <Route path="/profile" element={ <ProfileSearchContainer />} />
                 <Route path="/newfind" element={ <CreateNewLifer /> } />
                 <Route path="/order" element={ <HerpTaxonomyList /> } />
                 <Route path="profile/:entryId/edit" element={ <EditLifer />} />
