@@ -216,7 +216,6 @@ export const HerpTaxonomyList = () => {
             else {
                 const filterSpecificAmphib = amphibians.filter(herp => herp.species === newLifer.species && herp.genus === newLifer.genus && herp.family === newLifer.family)
                 filterSpecificAmphib.map(herp => {
-                    debugger
                     newLifer.commonName = herp.commonName
                     newLifer.aweb_uid = herp.aweb_uid 
 
@@ -378,7 +377,7 @@ return <>
             <button
                 onClick={(clickEvent) => foundItClick(clickEvent)}
                 className="btn btn-primary">
-                Found it before!
+                Add this to your Life List!
             </button>
 
         </form>
