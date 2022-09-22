@@ -55,9 +55,9 @@ fieldset {
     background-size: cover;
     
     box-shadow: 5px 5px 15px 5px #000000;
-    color: rgb(187, 240, 42);
+    color: rgb(175, 228, 31);
 
-    border: 4.2px double #98c6e6;
+    border: 4.2px double #7daaca;
     margin: 50px;
     padding: 4px;
     background-color: #224212;
@@ -105,15 +105,21 @@ fieldset {
 }
 
 .register-text {
-    color: #48b632d7;
-    background:rgba(108, 124, 18, 0.055);
+    color: #5fdf23;
+    margin: 9px;
     min-height:9px;
-    padding:10px;
+    padding:30px;
     -webkit-text-stroke: 1px black;
+    text-shadow: -2px -1px 6px rgb(214, 214, 94);
+    
+    
 }
 
 .register-text2 {
-    color: #48b632d7;
-    background:rgba(108, 124, 18, 0.055);
-    -webkit-text-stroke: .5px black;
+    color: #5fdf23;
+    -webkit-text-stroke: 1.03px black;
+    text-shadow: -1.8px 1.9px 4px hwb(60 35% 16%);
+    padding:160px;
+    margin-bottom: 70px;
+    
 }
