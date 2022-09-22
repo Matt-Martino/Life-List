@@ -76,7 +76,7 @@ export const YourLifeList = ({searchTermState}) => {
                                 <ul className="list">Species:  <i>{list.species}</i></ul>
                                 {
                                     list.subspecies
-                                    ?<ul className="list">Location Found:  <i>{list.subspecies}</i></ul>
+                                    ?<ul className="list">Subspecies:  <i>{list.subspecies}</i></ul>
                                     :""
                                 }
                                 {

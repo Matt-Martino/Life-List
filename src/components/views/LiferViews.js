@@ -4,7 +4,6 @@ import { HerpTaxonomyList } from "../user/browseTaxonomyTree"
 import { YourLifeList } from "../user/profile"
 import { EditLifer } from "../user/editLifer"
 import { SearchTaxonomy } from "../user/SearchTaxonomy"
-import { ProfileSearch } from "../user/profileSearch"
 import { ProfileSearchContainer } from "../user/profileSearchContainer"
 
 export const LiferViews = () => {

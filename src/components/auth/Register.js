@@ -24,7 +24,7 @@ export const Register = (props) => {
                         id: createdUser.id,
                     }))
 
-                    navigate("/")
+                    navigate("/profile")
                 }
             })
     }
@@ -55,7 +55,7 @@ export const Register = (props) => {
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
                 <h1 className="register-text">Please Register for Lifer List</h1>
-                <h2 className="register-text2">A place to record and keep track of your once in a lifetime finds.</h2>
+                
                 <fieldset>
                     <label htmlFor="fullName"></label>
                     <input onChange={updateUser}

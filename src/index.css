@@ -37,6 +37,8 @@ h6 {
   text-align: center;
   font-family: 'Roboto';
   letter-spacing: 1.6px;
+  text-shadow: 5px 5px 8px rgb(250, 250, 138);
+  
 
 
 }
@@ -46,9 +48,10 @@ Header {
 }
 
 .Header-text-edit {
-  color: #48b632d7;
-  background: rgba(108, 124, 18, 0.616);
+  color: #f8b248;
+  background: rgba(68, 78, 8, 0.767);
   min-height: 9px;
   padding: 10px;
-  -webkit-text-stroke: 1px rgb(8, 8, 8);
+  -webkit-text-stroke: 0.9px rgb(0, 0, 0);
+  text-shadow: 2px 2px 13px rgb(181, 252, 88);
 }

@@ -19,7 +19,7 @@ export const Login = () => {
                         id: user.id,
                     }))
 
-                    navigate("/")
+                    navigate("/profile")
                 }
                 else {
                     window.alert("Invalid login")
@@ -32,9 +32,10 @@ export const Login = () => {
             <section className="login-hug">
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1 className="register-text">Life List</h1>
-                    <h2 className="register-text">Please sign in bitch</h2>
+                    <h2 className="register-text2">A place to record and keep track of your once in a lifetime finds.</h2>
+                    
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
+                        <label htmlFor="inputEmail">Enter your Email address </label>
                         <input type="email"
                             value={email}
                             onChange={evt => set(evt.target.value)}

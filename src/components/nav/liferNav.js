@@ -8,19 +8,19 @@ export const LiferNav = () => {
     <ul className="navbar">
 
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/profile">Your Profile</Link>
+                <Link className="navbar__link" to="/profile">Your Lifer Profile</Link>
             </li>
 
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/newfind">Manually enter a New Find</Link>
+                <Link className="navbar__link" to="/newfind">Manually enter a New Lifer</Link>
             </li>
 
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/order">Browse Taxonomy trees</Link>
+                <Link className="navbar__link" to="/order">Add a Lifer via Taxonomy trees</Link>
             </li>
 
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/searchTaxonomy">Taxonomy Search</Link>
+                <Link className="navbar__link" to="/searchTaxonomy">Browse the whole Reptile or Amphibian Taxonomy list</Link>
             </li>
 
             {

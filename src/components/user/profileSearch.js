@@ -1,7 +1,9 @@
+import "./profile.css"
+
 export const ProfileSearch = ({setterFunction}) => {
     return (
-        <div>
-        <input onChange={
+        <div className="searchInputOuter">
+        <input className="searchInput" onChange={
             (changeEvent) => {
                 setterFunction(changeEvent.target.value)
             }
