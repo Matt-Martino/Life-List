@@ -1,10 +1,10 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { CreateNewLifer } from "../user/NewFind"
 import { HerpTaxonomyList } from "../user/browseTaxonomyTree"
-import { YourLifeList } from "../user/profile"
 import { EditLifer } from "../user/editLifer"
 import { SearchTaxonomy } from "../user/SearchTaxonomy"
 import { ProfileSearchContainer } from "../user/profileSearchContainer"
+import { AddAnImage } from "../user/addImage"
 
 export const LiferViews = () => {
 
@@ -23,6 +23,7 @@ export const LiferViews = () => {
                 <Route path="/order" element={ <HerpTaxonomyList /> } />
                 <Route path="profile/:entryId/edit" element={ <EditLifer />} />
                 <Route path="searchTaxonomy" element={ <SearchTaxonomy />} />
+                <Route path="profile/:entryId/editImage" element={ <AddAnImage />} />
 
             </Route>
         </Routes>
