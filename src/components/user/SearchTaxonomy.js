@@ -3,9 +3,9 @@ import { useEffect, useState } from "react"
 
 export const SearchTaxonomy = () => {
 
-    // const [reptiles, getReptiles] = useState([])
-    // const [amphibians, getAmphibians] = useState([])
+
     const [filteredHerpsArray, setFilteredHerps] = useState([])
+    const [repOrAmphib, setHerp] = useState([])
     const [searchTerms, setSearchTerms] = useState([])
     const [filterSelection, setFilterSelection] = useState(
         {
@@ -22,6 +22,7 @@ export const SearchTaxonomy = () => {
                 fetch(`http://localhost:8088/reptiles`)
                     .then(response => response.json())
                     .then((reptileArray) => {
+                        setHerp(reptileArray)
                         setFilteredHerps(reptileArray)
                     })
 
@@ -30,6 +31,7 @@ export const SearchTaxonomy = () => {
                 fetch(`http://localhost:8088/amphibians`)
                     .then(response => response.json())
                     .then((amphibianArray) => {
+                        setHerp(amphibianArray)
                         setFilteredHerps(amphibianArray)
                     })
 
@@ -47,7 +49,7 @@ export const SearchTaxonomy = () => {
     useEffect(
         () => {
             
-            const searchedTaxonomy = filteredHerpsArray.filter(herp => {
+            const searchedTaxonomy = repOrAmphib.filter(herp => {
                 return herp.family.toLowerCase().includes(searchTerms.toLowerCase())
                     || herp.genus.toLowerCase().includes(searchTerms.toLowerCase())
                     || herp.species.toLowerCase().includes(searchTerms.toLowerCase())
